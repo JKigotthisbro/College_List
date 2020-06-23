@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School</title>
+</head>
+<a>
+    <h1> Add a new school!</h1>
+    <form action= "{%url 'info:addSchool' %}" method="POST">
+        {% csrf_token %}
+         <li>{{schoolForm}}</li>
+        <input type="submit">
+    </form>
+    <br>
+<a href = "{% url 'info:index' %}">List</a>
+
+<a href = "{% url 'info:deleteSchools' %}">Delete</a>
+</a>
+</body>
+</html>
